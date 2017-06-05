@@ -1,0 +1,5 @@
+tests/CordovaTest/platform
+bin/
+bld/
+obj/
+tests/packages

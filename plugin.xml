@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.andreujuan.smartcards"
+      version="0.1.0">
+    <name>Windows Smarcards API</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="www/smartcards.js" name="smartcards">
+        <clobbers target="smartcards" />
+    </js-module>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/reader.js" name="reader">
+            <merges target="" />
+        </js-module>
+        <framework src="src/windows/PcScSDK/PcSc.csproj" 
+                        custom="true" 
+                        type="projectReference" 
+                        versions="10.*" />
+    </platform>
+
+</plugin>
